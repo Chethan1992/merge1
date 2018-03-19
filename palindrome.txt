@@ -1,0 +1,36 @@
+Program Description:
+This program shows how to check for in the given list of numbers whether each number is palindrome or not.For example, 
+the number is 121.If after reversing the number you get the same number,then the number is said to be palindrome.
+
+Program:
+import java.util.*
+class Palindromenumber{
+public static void main(String args[])
+{
+int numbers[]=new int[]{121,13,34,11,22,52};
+for(int i=0;i<numbers.length;i++)
+{
+int number=numbers[i];
+int reversednumber=0;
+int temp=0;
+while(number>0)
+{
+temp=number%10;
+number=number/10;
+reversednumber=reversednumber*10+temp;
+}
+if(numbers[i]==reversednumber)
+System.out.println(numbers[i]+"is a palindrome");
+else
+System.out.println(numbers[i]+"not a palindrome");
+}
+}
+}
+
+Output:
+121 is a palindrome
+13 is not a palindrome
+34 is not a palindrome
+11 is a palindrome
+22 is a palindrome
+54 is not a palindrome
